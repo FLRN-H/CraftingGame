@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://MAPS/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MAPS/Mehl.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MAPS/Ofen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MAPS/Eimer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MAPS/Kuh.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MAPS/Käsemacher.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MAPS/Tisch.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MAPS/Huhn.tscn" type="PackedScene" id=8]
+
+[node name="Node" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 190, 150 )
+
+[node name="Flour" type="Node" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="Mehl" parent="Flour" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 10, 140 )
+
+[node name="Mehl2" parent="Flour" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 70, 140 )
+
+[node name="Mehl3" parent="Flour" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 40, 140 )
+
+[node name="Ofen" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 300, 40 )
+
+[node name="Eimer" type="Node" parent="." index="3"]
+
+[node name="Eimer" parent="Eimer" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 30, 190 )
+
+[node name="Eimer2" parent="Eimer" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 10, 190 )
+
+[node name="Kuh" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 390, 189 )
+scale = Vector2( -2.375, 1.59375 )
+
+[node name="Käsemacher" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 310, 260 )
+
+[node name="Tisch" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 390, 40 )
+scale = Vector2( 1.90625, 1.90625 )
+
+[node name="Huhn" parent="." index="7" instance=ExtResource( 8 )]
+
+position = Vector2( 20, 260 )
+
+

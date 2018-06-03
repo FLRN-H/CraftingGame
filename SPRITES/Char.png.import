@@ -10,7 +10,7 @@ source_file="res://SPRITES/Char.png"
 source_md5="3d2d40ac56dc56372235f8ce3a4fc607"
 
 dest_files=[ "res://.import/Char.png-4bb6ba03b0072853a3a13c85ddba464b.stex" ]
-dest_md5="c489c65b94de58307b6379d255ad186a"
+dest_md5="bfd55aac0d4a2ffecdedf971401becdc"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -11,6 +11,7 @@ var eimer = 0
 var milch = 0
 var kaese = 0
 var kaesebrot = 0
+var weizen = 0
 
 var motion = Vector2()
 
@@ -22,6 +23,7 @@ func _ready():
 	print("Milch: ",milch)
 	print("Käse: ",kaese)
 	print("Käsebrot: ",kaesebrot)
+	print("Weizen: ",weizen)
 
 func _physics_process(delta):
 

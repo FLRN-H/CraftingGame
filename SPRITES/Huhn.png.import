@@ -10,7 +10,7 @@ source_file="res://SPRITES/Huhn.png"
 source_md5="a0e09ca7e766e6e5de70e7a9f278c6e2"
 
 dest_files=[ "res://.import/Huhn.png-625faccc5397bea0965c5a2d084a264f.stex" ]
-dest_md5="701622d4abbbaa351c6182defc212832"
+dest_md5="79cee76e22d232b4e512aeedffd71d6e"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -10,7 +10,7 @@ source_file="res://SPRITES/Ei.png"
 source_md5="cea922e1fadc7e7ebd4c0e609c1ad568"
 
 dest_files=[ "res://.import/Ei.png-b06399117f7529acae66c8e324af5dd2.stex" ]
-dest_md5="a7a875f863beac63ec7a9ad45fd6bac6"
+dest_md5="28f519cbf6e90f620bc337b4810bce48"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

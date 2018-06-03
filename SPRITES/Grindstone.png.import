@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex"
+path="res://.import/Grindstone.png-9121e8c0790714f9eae78d82e6578c97.stex"
 
 [deps]
 
-source_file="res://SPRITES/Ofen.png"
-source_md5="c3eb73ccaef5af48e862adece194fc94"
+source_file="res://SPRITES/Grindstone.png"
+source_md5="340f459c2d6c3e95bc662f2f84997b33"
 
-dest_files=[ "res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex" ]
-dest_md5="ae4bb550480e3e544bfa378db71e02bd"
+dest_files=[ "res://.import/Grindstone.png-9121e8c0790714f9eae78d82e6578c97.stex" ]
+dest_md5="317af17e5bf990fa3f0f8f9eb654ac1e"
 
 [params]
 

@@ -10,7 +10,7 @@ source_file="res://SPRITES/Mehl.png"
 source_md5="3bcaf68cc85c6e819963735eed35a035"
 
 dest_files=[ "res://.import/Mehl.png-559b1800a3b35b2eb02f4cdfffecba03.stex" ]
-dest_md5="a091fa9f1746cd7d145faf8838f314aa"
+dest_md5="36e2996109266c997665f5c426a6aac3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

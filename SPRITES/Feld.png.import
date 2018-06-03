@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex"
+path="res://.import/Feld.png-4c64511b8fef858bb39f1557898d39e6.stex"
 
 [deps]
 
-source_file="res://SPRITES/Ofen.png"
-source_md5="c3eb73ccaef5af48e862adece194fc94"
+source_file="res://SPRITES/Feld.png"
+source_md5="dbf0230dbff67dc73f4b38d0213fc25f"
 
-dest_files=[ "res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex" ]
-dest_md5="ae4bb550480e3e544bfa378db71e02bd"
+dest_files=[ "res://.import/Feld.png-4c64511b8fef858bb39f1557898d39e6.stex" ]
+dest_md5="d41537b5e6fd04e9733f7a7555f4458c"
 
 [params]
 

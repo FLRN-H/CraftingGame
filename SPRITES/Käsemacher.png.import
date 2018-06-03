@@ -10,7 +10,7 @@ source_file="res://SPRITES/Käsemacher.png"
 source_md5="c54989301c3c0359878447e3ea938007"
 
 dest_files=[ "res://.import/Käsemacher.png-37fd8544dae0fb96dcbf220267d6daac.stex" ]
-dest_md5="4653d0b95d2f177a0d1883c83e9a8c0e"
+dest_md5="5d49f3c578a2fc439c5e70924696534b"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -1,0 +1,288 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SCRIPT/Weizen.gd" type="Script" id=1]
+[ext_resource path="res://SPRITES/Weizen.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0.894531, 0.845393, 0.108322, 1, 0.507813, 0.458996, 0.0614929, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 3.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 38, 0 )
+initial_velocity = 0.6
+initial_velocity_random = 0.0
+angular_velocity = 5.04467e-43
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.2
+anim_speed_random = 0.1
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Gravity", "Initial Velocity" ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Weizen" type="Node2D"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+amount = 5
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( -4.76837e-07, 9.53674e-07 )
+scale = Vector2( 0.625, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="Sprite" index="0"]
+
+position = Vector2( -14.4237, -33.1544 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D2" type="Particles2D" parent="Sprite" index="1"]
+
+position = Vector2( 18.4635, -23.1406 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D3" type="Particles2D" parent="Sprite" index="2"]
+
+position = Vector2( 14.2473, -4.69422 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D4" type="Particles2D" parent="Sprite" index="3"]
+
+position = Vector2( 17.6203, 12.1711 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D5" type="Particles2D" parent="Sprite" index="4"]
+
+position = Vector2( 2.01994, -12.5998 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D6" type="Particles2D" parent="Sprite" index="5"]
+
+position = Vector2( 12.5608, 22.1848 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D7" type="Particles2D" parent="Sprite" index="6"]
+
+position = Vector2( -14.0021, -2.58606 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Particles2D8" type="Particles2D" parent="Sprite" index="7"]
+
+position = Vector2( -15.267, 18.4956 )
+scale = Vector2( 1.6, 0.843192 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material" ]
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 0.763101, 3.92442 )
+scale = Vector2( 1.59716, 1.42961 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+

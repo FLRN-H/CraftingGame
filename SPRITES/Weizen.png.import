@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex"
+path="res://.import/Weizen.png-8c895232506cecfa866e359edd3bb87d.stex"
 
 [deps]
 
-source_file="res://SPRITES/Ofen.png"
-source_md5="c3eb73ccaef5af48e862adece194fc94"
+source_file="res://SPRITES/Weizen.png"
+source_md5="982f8ec62c2805b16fd1f91db461837d"
 
-dest_files=[ "res://.import/Ofen.png-76addfb44c546c280b1995f54705aadb.stex" ]
-dest_md5="ae4bb550480e3e544bfa378db71e02bd"
+dest_files=[ "res://.import/Weizen.png-8c895232506cecfa866e359edd3bb87d.stex" ]
+dest_md5="9a51020970157dad1808393be8e8e739"
 
 [params]
 

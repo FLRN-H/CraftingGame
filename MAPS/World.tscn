@@ -11,7 +11,7 @@
 [ext_resource path="res://MAPS/Ofen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://MAPS/Grinder.tscn" type="PackedScene" id=10]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Uhr" type="Node" parent="." index="0"]
 
@@ -41,29 +41,21 @@ editor/display_folded = true
 
 position = Vector2( 110, 360 )
 feldTimer = 16
-minFeldTimer = 16
-maxAddFeldTimer = 10
 
 [node name="Feld2" parent="Felder" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 150, 360 )
 feldTimer = 16
-minFeldTimer = 16
-maxAddFeldTimer = 10
 
 [node name="Feld3" parent="Felder" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 150, 320 )
 feldTimer = 16
-minFeldTimer = 16
-maxAddFeldTimer = 10
 
 [node name="Feld4" parent="Felder" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 110, 320 )
 feldTimer = 16
-minFeldTimer = 16
-maxAddFeldTimer = 10
 
 [node name="Tiere" type="Node" parent="." index="4"]
 

@@ -11,7 +11,7 @@
 [ext_resource path="res://MAPS/Ofen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://MAPS/Grinder.tscn" type="PackedScene" id=10]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Uhr" type="Node" parent="." index="0"]
 
@@ -91,6 +91,7 @@ position = Vector2( 310, 260 )
 [node name="Ofen" parent="Geräte" index="2" instance=ExtResource( 9 )]
 
 position = Vector2( 300, 40 )
+brotTimer = 5
 
 [node name="Grinder" parent="Geräte" index="3" instance=ExtResource( 10 )]
 

@@ -4,19 +4,39 @@ export var amount_of_eggs = 2
 export var amount_of_flour = 1
 export var amount = 1
 
+export var brotTimer = 10
+
+var scene = load("res://MAPS/Brot.tscn")
+var brotScene
+onready var timer = get_node("Timer")
+
+func _ready():
+	timer.wait_time = brotTimer
+	timer.one_shot = true
+	print(timer.time_left)
+
+
 
 func _on_Area2D_body_entered(body):
-
-	#Baking Bread if you have 2 Eggs and 1 Flour
 	if body.get_name() == "Player":
-		if body.eier >= amount_of_eggs:
-			if body.mehl >= amount_of_flour:
-				body.eier -= amount_of_eggs
-				body.mehl -= amount_of_flour
-				body.brot += amount
-				print("Brot: ", body.brot)
-				print("Eier: ",body.eier)
-				print("Mehl: ",body.mehl)
+		print(body.get_name())
+		if body.mehl >= amount_of_flour:
+			if body.eier >= amount_of_eggs:
+				if has_node("Brot") == false:
+					print("Take the Brot")
+					if timer.is_stopped() == true:
+						body.mehl -= amount_of_flour
+						body.eier -= amount_of_eggs
+						print("Brot: ",body.brot)
+						print("Mehl: ",body.mehl)
+						print("Eier: ",body.eier)
+						timer.start()
 
 
-	print(body.get_name())
+func _on_Timer_timeout():
+	if has_node("Brot") == false:
+		print("pass")
+		brotScene = scene.instance()
+		brotScene.set_name("Brot")
+		brotScene.position = Vector2(-50,0)
+		add_child(brotScene)

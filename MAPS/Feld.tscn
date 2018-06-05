@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://SCRIPT/Feld.gd" type="Script" id=1]
 [ext_resource path="res://SPRITES/Feld.png" type="Texture" id=2]
+[ext_resource path="res://SPRITES/WeizenImWachsen.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[node name="Feld" type="Node2D" index="0"]
+[node name="Feld" type="Node2D"]
 
 z_index = -1
 script = ExtResource( 1 )
@@ -42,6 +43,13 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( -4.76837e-07, -10 )
+scale = Vector2( 0.625, 0.5 )
+texture = ExtResource( 3 )
 
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://SCRIPT/Uhr.gd" type="Script" id=1]
 [ext_resource path="res://MAPS/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://MAPS/Käsemacher.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MAPS/Ofen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://MAPS/Grinder.tscn" type="PackedScene" id=10]
+[ext_resource path="res://MAPS/Sägebock.tscn" type="PackedScene" id=11]
+[ext_resource path="res://MAPS/Baum.tscn" type="PackedScene" id=12]
+[ext_resource path="res://MAPS/Stein.tscn" type="PackedScene" id=13]
 
 [node name="Node" type="Node"]
 
@@ -27,11 +30,11 @@ editor/display_folded = true
 
 [node name="Eimer" parent="Eimer" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 40, 60 )
+position = Vector2( 20, -60 )
 
 [node name="Eimer2" parent="Eimer" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 10, 60 )
+position = Vector2( 180, -160 )
 
 [node name="Felder" type="Node" parent="." index="3"]
 
@@ -57,23 +60,35 @@ feldTimer = 16
 position = Vector2( 110, 320 )
 feldTimer = 16
 
+[node name="Feld5" parent="Felder" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 260, 390 )
+
+[node name="Feld6" parent="Felder" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 300, 390 )
+
+[node name="Feld7" parent="Felder" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 360, 300 )
+
 [node name="Tiere" type="Node" parent="." index="4"]
 
 editor/display_folded = true
 
 [node name="Huhn" parent="Tiere" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 20, 260 )
+position = Vector2( 190, 330 )
 
 [node name="Kuh" parent="Tiere" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 390, 189 )
+position = Vector2( 446, 226 )
 rotation = 3.14159
 scale = Vector2( 2.375, -1.59375 )
 
 [node name="Huhn2" parent="Tiere" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 20, 210 )
+position = Vector2( 340, 410 )
 
 [node name="Geräte" type="Node" parent="." index="5"]
 
@@ -81,20 +96,64 @@ editor/display_folded = true
 
 [node name="Tisch" parent="Geräte" index="0" instance=ExtResource( 7 )]
 
-position = Vector2( 390, 40 )
+position = Vector2( 470, -40 )
 scale = Vector2( 1.90625, 1.90625 )
 
 [node name="Käsemacher" parent="Geräte" index="1" instance=ExtResource( 8 )]
 
-position = Vector2( 310, 260 )
+position = Vector2( 480, 80 )
 
 [node name="Ofen" parent="Geräte" index="2" instance=ExtResource( 9 )]
 
-position = Vector2( 300, 40 )
+position = Vector2( 410, -40 )
 brotTimer = 5
 
 [node name="Grinder" parent="Geräte" index="3" instance=ExtResource( 10 )]
 
-position = Vector2( 150, 40 )
+position = Vector2( -20, 60 )
+
+[node name="Sägebock" parent="Geräte" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 240, 20 )
+
+[node name="Bäume" type="Node" parent="." index="6"]
+
+editor/display_folded = true
+
+[node name="Baum" parent="Bäume" index="0" instance=ExtResource( 12 )]
+
+position = Vector2( 100, -170 )
+
+[node name="Baum2" parent="Bäume" index="1" instance=ExtResource( 12 )]
+
+position = Vector2( 230, -100 )
+
+[node name="Baum3" parent="Bäume" index="2" instance=ExtResource( 12 )]
+
+position = Vector2( 120, -60 )
+
+[node name="Pickups" type="Node" parent="." index="7"]
+
+editor/display_folded = true
+
+[node name="Steine" type="Node" parent="Pickups" index="0"]
+
+editor/display_folded = true
+
+[node name="Stein" parent="Pickups/Steine" index="0" instance=ExtResource( 13 )]
+
+position = Vector2( -60, 100 )
+
+[node name="Stein2" parent="Pickups/Steine" index="1" instance=ExtResource( 13 )]
+
+position = Vector2( 470, 180 )
+
+[node name="Stein3" parent="Pickups/Steine" index="2" instance=ExtResource( 13 )]
+
+position = Vector2( 280, -80 )
+
+[node name="Stein4" parent="Pickups/Steine" index="3" instance=ExtResource( 13 )]
+
+position = Vector2( 290, 330 )
 
 

@@ -12,6 +12,9 @@ var milch = 0
 var kaese = 0
 var kaesebrot = 0
 var weizen = 0
+var baumstamm = 0
+var brett = 0
+var stein = 0
 
 var motion = Vector2()
 
@@ -24,6 +27,8 @@ func _ready():
 	print("Käse: ",kaese)
 	print("Käsebrot: ",kaesebrot)
 	print("Weizen: ",weizen)
+	print("Baummstämme: ",baumstamm)
+	print("Bretter: ",brett)
 
 func _physics_process(delta):
 

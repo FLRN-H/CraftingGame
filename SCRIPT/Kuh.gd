@@ -3,15 +3,18 @@ extends Node2D
 export var amount_of_eimer = 1
 export var amount = 1
 
-func _on_Area2D_body_entered(body):
+onready var area = get_node("Area2D")
 
-	#Milking 1 Bucket of Milk
-	if body.get_name() == "Player":
-		if body.eimer >= amount_of_eimer:
-			body.eimer -= amount_of_eimer
-			body.milch += amount
-			print("Eimer: ", body.eimer)
-			print("Milch: ",body.milch)
-
-
-	print(body.get_name())
+func _physics_process(delta):
+	var bodies = area.get_overlapping_bodies()
+	for body in bodies:
+		if body.name == "Player":
+			#print(body.name)
+			if Input.is_action_just_pressed("ui_select"):
+				print("lol")
+				if body.eimer >= amount_of_eimer:
+					body.eimer -= amount_of_eimer
+					body.milch += amount
+					print("Eimer: ", body.eimer)
+					print("Milch: ",body.milch)
+				else: print("not enough Eimer")

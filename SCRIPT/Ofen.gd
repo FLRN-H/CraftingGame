@@ -9,28 +9,13 @@ export var brotTimer = 10
 var scene = load("res://MAPS/Brot.tscn")
 var brotScene
 onready var timer = get_node("Timer")
+onready var area = get_node("Area2D")
 
 func _ready():
 	timer.wait_time = brotTimer
 	timer.one_shot = true
-	print(timer.time_left)
+	#print(timer.time_left)
 
-
-
-func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
-		print(body.get_name())
-		if body.mehl >= amount_of_flour:
-			if body.eier >= amount_of_eggs:
-				if has_node("Brot") == false:
-					print("Take the Brot")
-					if timer.is_stopped() == true:
-						body.mehl -= amount_of_flour
-						body.eier -= amount_of_eggs
-						print("Brot: ",body.brot)
-						print("Mehl: ",body.mehl)
-						print("Eier: ",body.eier)
-						timer.start()
 
 
 func _on_Timer_timeout():
@@ -40,3 +25,23 @@ func _on_Timer_timeout():
 		brotScene.set_name("Brot")
 		brotScene.position = Vector2(-50,0)
 		add_child(brotScene)
+		
+func _physics_process(delta):
+	var bodies = area.get_overlapping_bodies()
+	for body in bodies:
+		if body.name == "Player":
+			#print(body.name)
+			if Input.is_action_just_pressed("ui_select"):
+				print("lol")
+				if timer.is_stopped() == true:
+					if has_node("Brot") == false:
+						if body.mehl >= amount_of_flour:
+							if body.eier >= amount_of_eggs:
+								body.mehl -= amount_of_flour
+								body.eier -= amount_of_eggs
+								print("Brot: ",body.brot)
+								print("Mehl: ",body.mehl)
+								print("Eier: ",body.eier)
+								timer.start()
+					else: print("Take the Brot")
+				else: print("Is schon am backen")

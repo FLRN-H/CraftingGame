@@ -13,21 +13,29 @@ extents = Vector2( 10, 14.9401 )
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
+z_index = 1
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 1.1887, 15.3799 )
-scale = Vector2( 1.28061, 2.29342 )
+scale = Vector2( 1.6748, 1.56369 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 1.1887, 39.7571 )
+scale = Vector2( 1.28061, 0.749005 )
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="." index="1"]
+[node name="Area2D" type="Area2D" parent="." index="2"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -39,22 +47,16 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-position = Vector2( 1.42653, 16.2123 )
-scale = Vector2( 0.526102, 1.17832 )
+position = Vector2( 1.42653, 40.5895 )
+scale = Vector2( 0.526102, 0.439618 )
 shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="." index="2"]
-
-scale = Vector2( 1.6748, 1.56369 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.4, 0.4 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000

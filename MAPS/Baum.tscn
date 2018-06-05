@@ -1,0 +1,169 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://SCRIPT/Baum.gd" type="Script" id=1]
+[ext_resource path="res://SPRITES/Baum.png" type="Texture" id=2]
+[ext_resource path="res://SPRITES/Baumstumpf.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 9.47385, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.34885, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="CircleShape2D" id=10]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Baum" type="Node2D"]
+
+position = Vector2( 1.90735e-06, -1.90735e-06 )
+scale = Vector2( 1.875, 1.875 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+wachsZeit = 20
+wachsZeitMin = 20
+wachsZeitAdd = 20
+amount = 2
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+visible = false
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( -4.0677, 27.0734 )
+scale = Vector2( 1.14428, 0.492874 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( -11.5016, 28.0309 )
+scale = Vector2( 0.737772, 0.388096 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( 5.79913, 31.0052 )
+scale = Vector2( 1, 0.0905031 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( -17.9031, 30.519 )
+scale = Vector2( 0.309809, 0.142317 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( -16.8332, 28.3789 )
+scale = Vector2( 0.191818, 0.138287 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" index="5"]
+
+position = Vector2( 3.2057, 28.3733 )
+scale = Vector2( 0.497166, 0.227074 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( 8.01898, 29.9971 )
+scale = Vector2( 0.287505, 0.137856 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" index="7"]
+
+position = Vector2( -22.6145, 31.4989 )
+scale = Vector2( 0.339068, 0.0521555 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" index="8"]
+
+position = Vector2( 15.901, 31.5099 )
+scale = Vector2( 0.31116, 0.0505934 )
+shape = SubResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( -4.99219, 27.2702 )
+scale = Vector2( 1.63249, 0.735358 )
+shape = SubResource( 10 )
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
